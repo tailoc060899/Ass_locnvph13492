@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = 'mongodb+srv://admin:L461kM6sW1WD4q0Z@cluster0.whbjw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const mongoose = require('mongoose');
-mongoose.connect(db).catch(err=>{
+mongoose.connect(process.env.MONGODB_URI ||db).catch(err=>{
   console.log("co loi xay ra")
 })
 
