@@ -42,6 +42,9 @@ router.get('/json', function (req, res, next){
     res.send(data)
   });
 })
+router.get('/data', function (req, res, next){
+  res.send('okokok')
+})
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
